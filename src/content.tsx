@@ -7,18 +7,6 @@ export const config: PlasmoCSConfig = {
   matches: ["<all_urls>"]
 }
 
-/**
- * Generates a style element with adjusted CSS to work correctly within a Shadow DOM.
- *
- * Tailwind CSS relies on `rem` units, which are based on the root font size (typically defined on the <html>
- * or <body> element). However, in a Shadow DOM (as used by Plasmo), there is no native root element, so the
- * rem values would reference the actual page's root font size—often leading to sizing inconsistencies.
- *
- * To address this, we:
- * 1. Replace the `:root` selector with `:host(plasmo-csui)` to properly scope the styles within the Shadow DOM.
- * 2. Convert all `rem` units to pixel values using a fixed base font size, ensuring consistent styling
- *    regardless of the host page's font size.
- */
 export const getStyle = (): HTMLStyleElement => {
   const baseFontSize = 16
 
@@ -39,7 +27,7 @@ export const getStyle = (): HTMLStyleElement => {
 
 const PlasmoOverlay = () => {
   return (
-    <div className="plasmo-z-50 plasmo-flex plasmo-fixed plasmo-top-32 plasmo-right-8">
+    <div className="fixed right-8 top-32 z-50 flex">
       <CountButton />
     </div>
   )
