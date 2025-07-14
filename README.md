@@ -10,12 +10,6 @@ pnpm dev
 npm run dev
 ```
 
-Open your browser and load the appropriate development build. For example, if you are developing for the chrome browser, using manifest v3, use: `build/chrome-mv3-dev`.
-
-You can start editing the popup by modifying `popup.tsx`. It should auto-update as you make changes. To add an options page, simply add a `options.tsx` file to the root of the project, with a react component default exported. Likewise to add a content page, add a `content.ts` file to the root of the project, importing some module and do some logic, then reload the extension on your browser.
-
-For further guidance, [visit our Documentation](https://docs.plasmo.com/)
-
 ## Making production build
 
 Run the following:
@@ -26,7 +20,15 @@ pnpm build
 npm run build
 ```
 
-This should create a production bundle for your extension, ready to be zipped and published to the stores.
+Open your browser and load the appropriate development build. For example, if you are developing for the chrome browser, using manifest v3, use: `build/chrome-mv3-dev` or `build/chrome-mv3-prod`.
+
+## Template contents
+
+Current version of template contains simple messaging script between content script/popup to background scripts. And Plasmo storage, to store common data.
+
+Setup have husky, lint staged, prettier, and typescript check before commit.
+
+For ui part it's tailwind and shadcn. There currently button component (as an example)
 
 ## Submit to the webstores
 
