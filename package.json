@@ -12,7 +12,7 @@
     "pre-commit": "pnpm install && git add pnpm-lock.yaml && pnpm lint-staged --allow-empty && tsc --noEmit",
     "lint": "eslint . --ext .ts,.tsx --fix",
     "lint:check": "eslint . --ext .ts,.tsx",
-    "lint-staged": "lint-staged --no-stash"
+    "lint-staged": "lint-staged"
   },
   "dependencies": {
     "@plasmohq/messaging": "^0.7.2",
@@ -41,6 +41,7 @@
     "@typescript-eslint/eslint-plugin": "^8.36.0",
     "@typescript-eslint/parser": "^8.36.0",
     "eslint": "^9.30.1",
+    "eslint-plugin-import": "^2.32.0",
     "eslint-plugin-jsx-a11y": "^6.10.2",
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^5.2.0",
@@ -54,10 +55,8 @@
     "typescript": "5.3.3"
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx}": [
-      "eslint --fix",
-      "prettier --write"
-    ]
+    "**/*": "prettier --write --ignore-unknown",
+    "*.{js,jsx,ts,tsx,mjs,cjs}": "eslint"
   },
   "manifest": {
     "host_permissions": [

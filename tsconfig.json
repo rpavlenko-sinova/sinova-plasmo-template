@@ -17,9 +17,9 @@
     "moduleDetection": "force",
     "paths": {
       "~*": ["./src/*"],
-      "@/*": ["./*"]
+      "@/*": ["./*"],
     },
     "baseUrl": ".",
-    "typeRoots": ["./node_modules/@types"]
-  }
+    "typeRoots": ["./node_modules/@types"],
+  },
 }

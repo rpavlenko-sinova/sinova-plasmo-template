@@ -1,4 +1,4 @@
 // Import message handlers to register them
-import "./messages/iconCount"
+import '~background/messages/iconCount';
 
-console.log("background script loaded")
+console.log('background script loaded');
