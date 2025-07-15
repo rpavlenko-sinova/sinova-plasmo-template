@@ -14,6 +14,9 @@ importers:
       '@radix-ui/react-slot':
         specifier: ^1.2.3
         version: 1.2.3(@types/react@18.2.48)(react@18.2.0)
+      '@rpavlenko.sinova/prettier-config':
+        specifier: ^1.0.2
+        version: 1.0.2(prettier@3.2.4)
       class-variance-authority:
         specifier: ^0.7.1
         version: 0.7.1
@@ -1428,6 +1431,11 @@ packages:
     peerDependenciesMeta:
       '@types/react':
         optional: true
+
+  '@rpavlenko.sinova/prettier-config@1.0.2':
+    resolution: {integrity: sha512-NI3p2Q8dnflGIjXWM2orZDW/doY4w36eNT5hSFcX/BwJA0n1TKms+IKQbfVNH+XbW0ecC1nI+f4yO8oNkUsoww==}
+    peerDependencies:
+      prettier: '>=3.0.0'
 
   '@rtsao/scc@1.1.0':
     resolution: {integrity: sha512-zt6OdqaDoOnJ1ZYsCYGt9YmWzDXl4vQdKTyJev62gFhRGKdx7mcT54V9KIjg+d2wi9EXsPvAPKe7i7WjfVWB8g==}
@@ -5896,6 +5904,10 @@ snapshots:
       react: 18.2.0
     optionalDependencies:
       '@types/react': 18.2.48
+
+  '@rpavlenko.sinova/prettier-config@1.0.2(prettier@3.2.4)':
+    dependencies:
+      prettier: 3.2.4
 
   '@rtsao/scc@1.1.0': {}
 
