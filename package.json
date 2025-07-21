@@ -12,12 +12,13 @@
     "pre-commit": "pnpm install && git add pnpm-lock.yaml && pnpm lint-staged --allow-empty && tsc --noEmit",
     "lint": "eslint . --ext .ts,.tsx --fix",
     "lint:check": "eslint . --ext .ts,.tsx",
-    "lint-staged": "lint-staged"
+    "lint-staged": "lint-staged",
+    "format": "prettier . --write --log-level=warn",
+    "format:check": "prettier . --check --log-level=warn"
   },
   "dependencies": {
     "@plasmohq/messaging": "^0.7.2",
     "@radix-ui/react-slot": "^1.2.3",
-    "@rpavlenko.sinova/prettier-config": "^1.0.5",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "lucide-react": "^0.525.0",
@@ -34,6 +35,7 @@
     "@eslint/js": "^9.30.1",
     "@ianvs/prettier-plugin-sort-imports": "4.1.1",
     "@plasmohq/storage": "^1.15.0",
+    "@sinova-development/repos-configs": "^0.0.2",
     "@types/chrome": "0.0.258",
     "@types/node": "20.11.5",
     "@types/react": "18.2.48",

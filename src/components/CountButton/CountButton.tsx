@@ -1,6 +1,8 @@
 import { sendToBackground } from '@plasmohq/messaging';
 import { useStorage } from '@plasmohq/storage/hook';
 
+import { IconCountMessageType } from '~lib/enums/messageTypeEnum';
+
 type TButtonProps = {
   onClick?: () => void;
   disabled?: boolean;
@@ -15,7 +17,7 @@ export const CountButton = ({ onClick = () => {}, disabled = false }: TButtonPro
 
     await sendToBackground({
       name: 'iconCount',
-      body: { count: newCount },
+      body: { type: IconCountMessageType.updateIcon, payload: { count: newCount } },
     });
 
     if (onClick) {

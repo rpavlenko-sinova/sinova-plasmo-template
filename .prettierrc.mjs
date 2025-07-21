@@ -1,9 +1,7 @@
-/** @type {import('prettier').Config & import('prettier-plugin-tailwindcss').PluginOptions} */
-import config from '@rpavlenko.sinova/prettier-config';
+import { resolveConfig } from '@sinova-development/repos-configs/prettier-config';
 
-export default {
-  ...config,
-  plugins: [...(config.plugins || []), '@ianvs/prettier-plugin-sort-imports'],
+export default resolveConfig({
+  plugins: ['@ianvs/prettier-plugin-sort-imports'],
   importOrder: [
     '<BUILTIN_MODULES>', // Node.js built-in modules
     '<THIRD_PARTY_MODULES>', // Imports not matched by other special words or groups.
@@ -16,4 +14,4 @@ export default {
     '',
     '^[./]',
   ],
-};
+});
