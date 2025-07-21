@@ -8,4 +8,5 @@ Folder for holding constants
 
 ## Best practices
 
-1.**Declarative naming** - Name of file/constant should tell about in content. 2.**Use SCREAMING_SNAKE_CASE for constant naming** - in this way they are easily distinguishable among other code.
+1. **Declarative naming** - Name of file/constant should tell about in content.
+2. **Use SCREAMING_SNAKE_CASE for constant naming** - in this way they are easily distinguishable among other code.
