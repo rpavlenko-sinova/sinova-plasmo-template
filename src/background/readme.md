@@ -19,9 +19,17 @@ This directory contains all background scripts for the browser extension. Backgr
 Proper message typing is important to keep code clean and readable.
 Here is a code snippet, that shows example of how to setup messaging.
 
-There are no imports, so it takes less space
+### src/background/index.ts
 
-### ./lib/enums/messageTypeEnum.ts
+```ts
+// Import message handlers to register them
+import '~background/messages/iconCount';
+import '~background/messages/count';
+
+console.log('background script loaded');
+```
+
+### src/lib/enums/messageTypeEnum.ts
 
 ```ts
 export enum MessageType {
