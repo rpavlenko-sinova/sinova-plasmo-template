@@ -25,7 +25,8 @@ There are no imports, so it takes less space
 
 ```ts
 export enum MessageType {
-  increaseCount = 'increaseCount', // Optional. It's easier to debug code with string values, especially if enum contains 3+ elements.
+  // Optional. It's easier to debug code with string values, especially if enum contains 3+ elements.
+  increaseCount = 'increaseCount',
   decreaseCount,
 }
 ```
@@ -34,7 +35,10 @@ export enum MessageType {
 
 ```ts
 sendToBackground({
-  name: 'count', // Name should be the same as file name in src/background/messages/. TS going to show error (2322) type is not assignable. Don't worry after prod-build/dev-build, if setup is correct it will go away.
+  name: 'count',
+  // Name should be the same as file name in src/background/messages/.
+  // TS going to show error (2322) type is not assignable.
+  // Don't worry after prod-build/dev-build, if setup is correct it will go away.
   body: {
     type: MessageType.increaseCount,
     payload: {
@@ -71,7 +75,7 @@ const handler: PlasmoMessaging.MessageHandler = async (req, res) => {
       res.send({ success: false }); // res.send is optional. Only if content/popup supposed to receive some value
     }
   }
-  res.send({ success: true });
+  res.send({ success: true, count });
 };
 
 export default handler; // default export is needed for plasmo
